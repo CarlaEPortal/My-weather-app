@@ -1,0 +1,111 @@
+body {
+  background: linear-gradient(
+    44.8deg,
+    rgba(255, 136, 102, 0.67) -53.1%,
+    rgba(255, 221, 136, 0.28) 49%
+  );
+}
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.menu {
+  justify-content: center;
+}
+.weather-app {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 6px solid #ec729c;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  color: #c54c82;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 10px 20px;
+  max-width: 600px;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn {
+  background-color: #fdfdcb;
+  margin-top: 10px;
+}
+
+.heather {
+  text-align: center;
+}
+
+.city {
+  font-size: 40px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.current-info {
+  border: 2px solid #f4aeba;
+  max-width: 320px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  align-content: center;
+  justify-content: center;
+  display: block;
+  margin: 0 auto;
+}
+.current-temperature {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -33px;
+  left: -15px;
+  color: #c54c82;
+}
+
+.cloudy-rainy-sunny {
+  width: 60px;
+}
+.extra-info {
+  position: relative;
+  top: 25px;
+  text-align: left;
+}
+
+.next-week .col {
+  text-align: center;
+  border: 2px solid #f4aeba;
+  border-radius: 10px;
+  margin-inline-end: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding: 10px 10px;
+}
+a {
+  color: #c54c82;
+  text-decoration: none;
+}
+a:hover {
+  color: #f4aeba;
+  cursor: pointer;
+}
+
+footer {
+  font-family: "Quicksand", sans-serif;
+  color: #c54c82;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+}
