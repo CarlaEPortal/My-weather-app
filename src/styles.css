@@ -15,12 +15,18 @@ body {
   z-index: -1;
 }
 
+#icon {
+  width: 80px;
+}
+
 #description {
   text-transform: capitalize;
 }
+
 .menu {
   justify-content: center;
 }
+
 .weather-app {
   background-color: rgba(255, 255, 255, 0.5);
   border: 6px solid #ec729c;
@@ -43,6 +49,7 @@ body {
 .btn {
   background-color: #fdfdcb;
   margin-top: 10px;
+  border: #fdfdcb;
 }
 
 .heather {
@@ -87,9 +94,6 @@ body {
   color: #c54c82;
 }
 
-.cloudy-rainy-sunny {
-  width: 60px;
-}
 .extra-info {
   position: relative;
   top: 25px;
