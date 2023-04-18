@@ -60,7 +60,7 @@ function showWeather(response) {
   changeCity.innerHTML = response.data.name;
   console.log(response.data);
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");

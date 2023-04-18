@@ -14,6 +14,10 @@ body {
   min-height: 100%;
   z-index: -1;
 }
+
+#description {
+  text-transform: capitalize;
+}
 .menu {
   justify-content: center;
 }
@@ -97,7 +101,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #f4aeba;
+  color: #fdfdcb;
   cursor: pointer;
 }
 
