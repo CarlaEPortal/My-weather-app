@@ -71,6 +71,12 @@ function showWeather(response) {
   minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}º`;
   let maxTemp = document.querySelector("#max-temp");
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}º`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function currentPosition(position) {
