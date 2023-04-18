@@ -70,6 +70,15 @@ body {
   font-weight: 500;
 }
 
+.current-temperature .active {
+  cursor: default;
+}
+
+.current-temperature .active:hover {
+  text-decoration: none;
+  color: #c54c82;
+}
+
 .units {
   font-size: 15px;
   position: relative;

@@ -56,6 +56,9 @@ function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let displayTemp = document.querySelector("#current-temp");
   displayTemp.innerHTML = `${temperature} `;
+
+  celsiusTemperature = response.data.main.temp;
+
   let changeCity = document.querySelector("#current-city");
   changeCity.innerHTML = response.data.name;
   console.log(response.data);
@@ -97,20 +100,29 @@ currentLocate.addEventListener("click", showGeoLocation);
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", handleSubmit);
 
-function transformCel(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let celsiusTemp = document.querySelector("#current-temp");
-  celsiusTemp.innerHTML = 19;
+  let temperatureElement = document.querySelector("#current-temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", transformCel);
 
-function transformFah(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemp = document.querySelector("#current-temp");
-  fahrenheitTemp.innerHTML = 66;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", transformFah);
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Utrecht");
