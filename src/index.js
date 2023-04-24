@@ -117,6 +117,30 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = [`Mon`, `Tue`, `Wed`, `Thu`, `Fri`];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+        <div class="weather-forecast-date">
+           <h5>${day}</h5>
+        </div>
+        <img src="images/1.svg" width="50" alt="..." />
+        <span class="weather-forecast-temperature-min">2º</span>
+            |
+        <span class="weather-forecast-temperature-max">9º</span>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -126,3 +150,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Utrecht");
+displayForecast();

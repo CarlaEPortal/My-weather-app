@@ -79,6 +79,7 @@ body {
 
 .current-temperature .active {
   cursor: default;
+  text-decoration: none;
 }
 
 .current-temperature .active:hover {
@@ -111,7 +112,6 @@ body {
 }
 a {
   color: #c54c82;
-  text-decoration: none;
 }
 a:hover {
   color: #fdfdcb;
